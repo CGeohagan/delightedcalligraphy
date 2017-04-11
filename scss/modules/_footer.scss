@@ -1,0 +1,22 @@
+/*   FOOTER
+ **************/
+
+footer {
+	padding: 30px 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (min-width: $xs) {
+
+	footer {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	
+}
+
+
+

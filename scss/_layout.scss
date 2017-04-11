@@ -1,0 +1,44 @@
+/*   LAYOUT
+ **************/
+
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#page {
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.col {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.header {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	z-index: 90;
+}
+
+
+
+@media (min-width: $xs) {
+
+
+	
+}
+
+
+
+
+/* Sticky footer */
+//@include sticky-footer( $footerheight, '#page','#main','#footer');
+

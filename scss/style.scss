@@ -1,0 +1,49 @@
+/*!
+Theme Name: Delighted Calligraphy
+Theme URI: http://delightedcalligraphy.com
+Author: Colleen Geohagan
+Author URI: http://cgeohagan.github.io
+Description: themeDescription
+Version: 1.2
+License: The MIT License (MIT)
+License URI: http://opensource.org/licenses/MIT
+Text Domain: delighted-calligraphy
+*/
+
+
+/* RESET & CONFIG
+------------------ */
+@import "config/reset"; 
+@import "config/mixins";
+@import "config/variables";
+
+
+/* =BASE
+------------------ */
+@import "base";
+
+
+/* =LAYOUTS
+------------------ */
+@import "layout";
+
+
+/* =MODULES
+------------------ */
+@import "modules/header";
+@import "modules/main";
+@import "modules/footer";
+@import "modules/forms";
+
+
+/* =THEMES
+------------------ */
+@import "themes";
+
+
+/* =STATES
+------------------ */
+@import "states";
+
+
+
