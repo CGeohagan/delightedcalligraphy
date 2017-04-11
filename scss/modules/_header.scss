@@ -49,13 +49,13 @@
 			display: block;
 			padding: 10px 15px;
 			margin: 2px 0;
-			text-decoration: none;
-			cursor: pointer;
+			font-family: $stack-san-serif;
+			color: $dark-grey;
+			text-transform: uppercase;
 			&:hover,
 			&:focus {
 				color: $hover;
 			}
-
 		}
 	
 	}

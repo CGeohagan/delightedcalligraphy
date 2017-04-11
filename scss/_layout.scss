@@ -21,8 +21,11 @@ body {
 
 
 .header {
+	padding: 2% 2.5%;
 	width: 100%;
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	flex-direction: row;
 	position: fixed;
 	z-index: 90;
