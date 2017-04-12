@@ -26,6 +26,7 @@ body, input, textarea {
 h1, h2, h3 {
 	font-weight: 400;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 h1 {
@@ -59,7 +60,8 @@ ul {
 
 /* Links */
 
-a {
+a, 
+button {
 	color: $link;
 	text-decoration: none;
 	cursor: pointer;
@@ -68,6 +70,10 @@ a {
 	&:hover {
 		color: $hover;
 	}
+}
+
+button {
+	outline: none;
 }
 
 
@@ -87,8 +93,8 @@ a {
 
 img {
 	display: block;
-	margin: 0 auto;
-	max-width: 100%;
 	height: auto;
+	max-width: 100%;
+	width: 100%;
 }
 

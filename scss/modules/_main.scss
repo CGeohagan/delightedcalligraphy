@@ -1,6 +1,6 @@
 
-/*   MAIN MODULE STYLES
- *************************/
+/*   MAIN 
+ ************/
 
 
 
@@ -208,13 +208,13 @@
 		display: flex;
 		height: 25%;		
 		position: absolute;
-		transform: translateY(100%);
-		transition: transform .6s ease;
+		
 		width: 100%;
 		z-index: 3;
 	}
 
 	h2 a {
+		color: $dark-grey;
 		display: block;
 		width: 75%;
 		position: absolute;
@@ -250,7 +250,7 @@
 /* Details */
 
 .details,
-.details__border,
+.details__border--double,
 .details__pagination {
 	display: flex;
   	flex-direction: column;
@@ -260,19 +260,22 @@
 
 .details {
 	height: 100%;
- 	margin-top: 150px;
+ 	margin: 150px 0 50px;
 	
-	&__border {
+	&__border--double {
 		height: 450px;
  		width: 90%;
- 		border-top: 4px double $light-cream;
-    	border-bottom: 4px double $light-cream;
+ 		border-top: 4px double $dark-grey;
+    	border-bottom: 4px double $dark-grey;
 	}
 
 	&__pagination {
 		color: $light-cream;
-		margin: .5em auto;
-		padding: 2em;
+		margin: 8px auto;
+
+		a {
+			padding: .5em;
+		}
 	}
 
 	h1 {
@@ -284,7 +287,7 @@
  		height: 1px;
  		left: 25%;
  		bottom: -10px;
- 		background-color: $light-cream;
+ 		background-color: $dark-grey;
  		content: '';
  		position: absolute;
 	}
@@ -296,11 +299,11 @@
 
 }
 
-@media (min-width: $s) {
+@media (min-width: $m) {
 
-	.details {
+	.details {	
 
-		margin-top: 80px;	
+		margin: 0;
 
 		&__pagination {
 			flex-direction: row;
@@ -316,11 +319,9 @@
 	
 	.details {
 
-		margin-top: 50px;
-
-		&__border {
+		&__border--double {
 			border-radius: 100%;
- 			border: 4px double $light-cream;
+ 			border: 4px double $dark-grey;
 			height: 450px;
 			width: 450px;		
 		}

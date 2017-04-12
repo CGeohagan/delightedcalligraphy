@@ -8,7 +8,7 @@
 ?>
 
 </div><!-- #page -->
-<footer role="contentinfo">	
+<footer class="footer" role="contentinfo">	
 	<div id="copyright">
         &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>	        
     </div>

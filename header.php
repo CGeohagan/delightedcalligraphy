@@ -22,7 +22,7 @@
 
 
     <!-- favicon & links -->
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png" />
     <link rel="pingback" href="<?php bloginfo( "pingback_url" ); ?>" />
 
     <!-- stylesheets are enqueued via functions.php -->
@@ -45,7 +45,7 @@
             
             <div class="logo">
                 <a href="<?php echo esc_url( home_url( "/" ) ); ?>">
-                    <?php get_template_part( 'assets/images/inline', 'logo.svg' );
+                    <?php get_template_part( 'assets/images/logo.svg' );
                     ?>
                 </a>
             </div>  
@@ -63,7 +63,7 @@
                     <?php wp_nav_menu( $args ); ?>
                 </nav>
             </div>    
-            <button class="nav-toggle">
+            <button class="access__toggle">
                 <span></span>
             </button>
         

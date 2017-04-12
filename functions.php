@@ -28,7 +28,7 @@ if ( ! function_exists( 'delighted_calligraphy_setup' ) ):
         // Add default posts and comments RSS feed links to head.
         add_theme_support( 'automatic-feed-links' );
         // Enable support for Post Thumbnails on posts and pages
-        //add_theme_support( 'post-thumbnails' );
+        add_theme_support( 'post-thumbnails' );
         // Enable support for Post Formats.
         add_theme_support( 'post-formats', array( 
             'aside', 

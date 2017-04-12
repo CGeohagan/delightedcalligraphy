@@ -1,2 +1,27 @@
-/*  HEADER MODULES
+/*      THEME
  ********************/
+
+
+
+ /* Portfolio Theme Styles */
+
+ .portfolio {
+ 	background-color: $light-cream;
+ 	padding-top: 150px;
+ }
+
+ .portfolio-title {
+ 	margin: 1em 0;
+ }
+
+ .page-template-page-portfolio .footer {
+ 	background-color: $light-cream;
+ }
+
+
+
+ /* Single Portfolio Theme Styles */
+
+ .single-portfolio {
+ 	background-color: $light-cream;
+ }

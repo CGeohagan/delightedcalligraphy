@@ -2,7 +2,7 @@
  **************/
  
 
-footer {
+.footer {
 	padding: 30px 20px;
 	width: 100%;
 	display: flex;
@@ -12,7 +12,7 @@ footer {
 
 @media (min-width: $xs) {
 
-	footer {
+	.footer {
 		flex-direction: row;
 		justify-content: space-between;
 	}

@@ -1,1 +1,22 @@
-function topSlide(){var e=$(window).scrollTop();e<=500?($toTop.hide(),$showHeaderButton.hide()):($toTop.show(),!$(".main-header").hasClass("show-header")&&document.documentElement.clientWidth>740&&$showHeaderButton.show())}function showHeader(){$showHeaderButton.hide(),$hideHeaderButton.show(),$(".main-header").addClass("show-header")}function hideHeader(){$hideHeaderButton.hide(),$showHeaderButton.show(),$(".main-header").removeClass("show-header")}var $=jQuery.noConflict();$(".header-search-button").click(function(){$(".header-search-button").hide(),$(".header-exit-button").show(),$(".header-search").slideDown("500")}),$(".header-exit-button").click(function(){$(".header-search-button").show(),$(".header-exit-button").hide(),$(".header-search").slideUp("500")}),$(".menu-button").click(function(){$(".mobile-menu").toggle("500")}),$(".mobile-access li").click(function(){$(this).children("ul").toggle("500")});var $toTop=$(".to-top"),$showHeaderButton=$(".primary-click-menu"),$hideHeaderButton=$(".primary-close-menu");$(window).scroll(topSlide),$toTop.click(function(){return $("html, body").animate({scrollTop:0},300),$hideHeaderButton.hide(),$(".main-header").removeClass("show-header"),!1}),$showHeaderButton.click(function(){showHeader()}),$hideHeaderButton.click(function(){hideHeader()});
+jQuery(document).ready(function($){
+// Script goes here
+
+	/* ************************************************
+ 	  Scripts for access navigation and toggle button
+ 	************************************************ */
+
+ 	// Select the header, navigation button, navigation section, and navigation list
+ 	const header = document.querySelector('.header');
+    const accessToggleButton = document.querySelector('.access__toggle');
+    const accessNav = document.querySelector('.access');
+    const accessNavList = document.querySelector('.access__list');
+
+ 	// When you click on the toggle button, toggle the active classes
+ 	accessToggleButton.addEventListener('click', function() {
+ 		header.classList.toggle('is-header-active');
+ 		accessToggleButton.classList.toggle('is-toggle-active');
+ 		accessNav.classList.toggle('is-access-active');
+ 		accessNavList.classList.toggle('is-access-list-active');
+ 	});
+
+});

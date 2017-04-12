@@ -1,100 +1,104 @@
-/*  HEADER MODULES
+/*      HEADER 
  ********************/
 
 
+
+/* Access Navigation Toggle Button */
+
+.access__toggle {	
+	background: none;	
+	height: 30px;
+	margin-right: 2.5%;
+	position: relative;
+	width: 30px;
+	z-index: 999;
+	
+	span,
+	span:before,
+	span:after {
+		width: 100%;
+		height: 2px;
+		right: 0;
+		position: absolute;
+	}
+
+	span:before,
+	span:after {
+		content: '';
+	}
+
+}
+
+
+
+/* Logo */
 
 .logo svg {
 	width: 110px;
 	height: 90px;
 }
 
+
+
+/* Access Navigation */
+
 .access {
 
-	opacity: 0;
-	transition: opacity .8s ease-in-out;
 	width: 100%;
 	margin: 0;
 
-	div {
-		float: left;
-		overflow: hidden;
-		position: relative;
-		width: 100%;
-	}
-
-	ul {
+	&__list {
 		position: fixed;
 	    display: flex;
-	    right: -200%;
 	    top: 0;
 	    bottom: 0;
 	    width: 60%;
-	    background: none;
 	    flex-direction: column;
 	    padding-top: 5em;
-	    transition: right .6s ease-in-out, 
-	    			background .8s ease-in-out;
 		margin: 0 auto;
 		text-align: center;
-		list-style: none;
-
 	}
 
 	li {
 		position: relative;
 		display: inline-block;
 		vertical-align: middle;
+	}
 
-		a {
-			display: block;
-			padding: 10px 15px;
-			margin: 2px 0;
-			font-family: $stack-san-serif;
-			color: $dark-grey;
-			text-transform: uppercase;
-			&:hover,
-			&:focus {
-				color: $hover;
-			}
+	a {
+		display: block;
+		padding: 10px 15px;
+		margin: 2px 0;
+		font-family: $stack-san-serif;
+		color: $dark-grey;
+		text-transform: uppercase;
+		&:active,
+		&:hover {
+			color: $white;
 		}
-	
 	}
 
 }
 
-#site-header.active {
 
-	.access {
-		opacity: 1;
-
-		ul {
-			background-color: $violet;
-			right: 0;
-			z-index: 999;
-			overflow: auto;
-		}
-
-	}
-
-}
 
 /*   MEDIA QUERIES
  ********************/
 
 @media (min-width: $m) {
 
-	.access ul {
+	.access__list {
 		position: relative;
 		flex-direction: row;
 		padding: 0;
 		width: 100%;
 		right: 0;
-	}
 
-	#site-header.active {
-		.access ul {
-			background: none;
+		a:active,
+		a:hover {
+			color: $hover;
 		}
+		
 	}
 
 }
