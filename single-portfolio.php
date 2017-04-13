@@ -22,8 +22,8 @@ get_header(); ?>
                     <p><?php the_field('description'); ?></p>
                 </div>
                 <div class="details__pagination">
-                    <?php previous_post_link(); ?>
-                    <?php next_post_link(); ?>
+                    <div class="details__pagination__links"><?php previous_post_link(); ?></div>
+                    <div class="details__pagination__links"><?php next_post_link(); ?></div>
                 </div>
             </div>
 

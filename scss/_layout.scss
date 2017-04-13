@@ -1,28 +1,18 @@
 /*   LAYOUT
  **************/
 
-
-body, #page {
-	margin: 0;
-	padding: 0;
+html {
+	height: 100%;
 }
 
-.col, #page {
+body {
+	min-height: 100vh;
+}
+
+body, .col, #page {
 	display: flex;
 	flex-direction: column;
 }
-
-
-.col {
-	display: flex;
-	flex-direction: column;
-}
-
-.primary, .secondary {
-	display: block;
-}
-
-
 
 .header {
 	padding: 2% 2.5%;
@@ -35,7 +25,17 @@ body, #page {
 	z-index: 90;
 }
 
+.primary, .secondary {
+	display: block;
+}
 
+.secondary {
+
+	img {
+		padding: .5em 1em;
+	}
+
+}
 
 @media (min-width: $m) {
 
@@ -54,8 +54,17 @@ body, #page {
 
 	.secondary {
 		margin-left: 50%;
+
+		img {
+			padding: 0 .5em .5em;
+		}
+
 	}
 	
+}
+
+.footer {
+	margin-top: auto;
 }
 
 

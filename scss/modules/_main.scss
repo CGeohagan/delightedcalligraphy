@@ -270,12 +270,21 @@
 	}
 
 	&__pagination {
-		color: $light-cream;
-		margin: 8px auto;
+		margin: 8px auto;		
+	}
+
+	&__pagination__links {
+		padding: .5em;
 
 		a {
+			color: $dark-grey;
 			padding: .5em;
+			&:hover,
+			&:focus {
+				color: $violet;
+			}
 		}
+
 	}
 
 	h1 {
@@ -338,10 +347,9 @@
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	margin: 10px 0;
+	margin: 10px;
 	padding: 30px;
 	text-align: center;
-	width: 100%;
 
 	&--half {
 		border-bottom: 1px solid $dark-grey;
@@ -386,6 +394,12 @@
 			border-right: 1px solid $dark-grey;
 		}
 
+		&--row {
+			display: flex;
+			flex-direction: row;
+			margin: 0 1em;
+		}
+
 	}
 
 }
@@ -403,6 +417,11 @@
 	    height: 96%;
 	    top: 2%;
 	    left: 2%;
+	}
+
+	&--margin {
+		border: 12px solid $light-cream;
+		margin: 2em;
 	}
 }
 

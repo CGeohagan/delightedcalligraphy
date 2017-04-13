@@ -3,25 +3,36 @@
 
 
 
- /* Portfolio Theme Styles */
+/* Portfolio Theme Styles */
 
- .portfolio {
- 	background-color: $light-cream;
- 	padding-top: 150px;
- }
+.portfolio {
+	padding-top: 150px;
+}
 
- .portfolio-title {
- 	margin: 1em 0;
- }
+.portfolio-title {
+	margin: 1em 0;
+}
 
- .page-template-page-portfolio .footer {
- 	background-color: $light-cream;
- }
-
+.page-template-page-portfolio {
+	background-color: $light-cream;
+}
 
 
- /* Single Portfolio Theme Styles */
 
- .single-portfolio {
- 	background-color: $light-cream;
- }
+/* Single Portfolio Theme Styles */
+
+.single-portfolio {
+	background-color: $light-cream;
+}
+
+
+
+/* Pricing Theme Styles */
+
+.pricing {
+	padding-top: 150px;
+}
+
+.page-template-page-pricing {
+	background-color: $violet;
+}

@@ -28,12 +28,11 @@ get_header(); ?>
 
         <div class="item">
             <figure>
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
+                <a href="<?php the_permalink(); ?>" class="portfolio-link"><?php the_post_thumbnail('large'); ?></a>
                 <h2>
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
-            </figure>
-            
+            </figure>           
         </div>
 
     <?php endwhile; endif; ?>
