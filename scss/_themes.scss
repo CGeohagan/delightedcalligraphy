@@ -6,7 +6,7 @@
 /* Portfolio Theme Styles */
 
 .portfolio {
-	padding-top: 150px;
+	padding: 150px 1em 0;
 }
 
 .portfolio-title {
@@ -22,7 +22,7 @@
 /* Single Portfolio Theme Styles */
 
 .single-portfolio {
-	background-color: $violet;
+	background-color: $light-violet;
 }
 
 
@@ -34,5 +34,15 @@
 }
 
 .page-template-page-pricing {
-	background-color: $light-cream;
+	background-color: $violet;
+
+	.footer a {
+
+		&:hover,
+		&:focus {
+			color: $light-cream;
+		}
+
+	}
+	
 }

@@ -278,23 +278,25 @@
 
 		a {
 			color: $dark-grey;
+			font-size: $medium;
 			padding: .5em;
 			&:hover,
 			&:focus {
-				color: $violet;
+				color: $white;
 			}
 		}
 
 	}
 
 	h1 {
+		font-weight: 700;
 		position: relative;
 	}
 
 	h1:after {
-		width: 50%;
- 		height: 1px;
- 		left: 25%;
+		width: 70%;
+ 		height: 3px;
+ 		left: 15%;
  		bottom: -10px;
  		background-color: $dark-grey;
  		content: '';
@@ -302,6 +304,7 @@
 	}
 
 	p {
+		font-size: $medium;
 		margin: 2em 2em 0;
 		text-align: center;
 	} 
@@ -420,7 +423,7 @@
 	}
 
 	&--margin {
-		border: 12px solid $white;
+		border: 12px solid $light-cream;
 		margin: 2em;
 	}
 }
@@ -451,7 +454,7 @@
 
 	h1 {
 		font-family: $stack-san-serif;
-		font-size: 24px;
+		font-size: $large;
 	}
 
 }
