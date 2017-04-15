@@ -94,6 +94,14 @@ function delighted_calligraphy_scripts() {
       get_template_directory_uri() . '/assets/js/theme.js',
       array('jquery'), '3.1.1', true );
 
+    // Slider Scripts
+    if (is_page('styles')) {
+        wp_enqueue_script(
+            'slider-init',
+            get_template_directory_uri() . '/assets/js/slider.js',
+        array('jquery'), '3.1.1', true );
+    }
+
 }    
 add_action('wp_enqueue_scripts', 'delighted_calligraphy_scripts');
 

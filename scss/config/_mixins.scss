@@ -1,3 +1,10 @@
+/*   SCSS MIXINS
+ ******************/
+
+@mixin transition($property) {
+  transition: $property .6s ease;
+}
+
 @mixin sticky-footer($footer-height, $wrapper-selector: unquote("#wrapper"), $container-selector: unquote("#container"), $footer-selector: unquote("#footer")) {
   html, body {
     height: 100%;
