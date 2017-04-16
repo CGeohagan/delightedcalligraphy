@@ -102,6 +102,15 @@ function delighted_calligraphy_scripts() {
         array('jquery'), '3.1.1', true );
     }
 
+    // Loader Scripts
+    if (is_page('home')) {
+        wp_enqueue_script(
+            'loader-init',
+            get_template_directory_uri() . '/assets/js/loader.js',
+        array('jquery'), '3.1.1', true );
+    }
+
+
 }    
 add_action('wp_enqueue_scripts', 'delighted_calligraphy_scripts');
 

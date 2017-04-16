@@ -7,6 +7,17 @@
 
 get_header(); ?>
 
+<div class="loader">
+    <div class="loader__logo">
+        <div class="loader__logo__calligraphy">
+            <?php get_template_part( 'assets/images/logofull.svg' );
+                    ?>
+        </div>
+        <p class="loader__logo__text">
+            Calligraphy
+        </p>
+    </div>
+</div> 
 
 <main id="main" role="main" class="col">
 

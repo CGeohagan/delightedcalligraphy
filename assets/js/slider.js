@@ -5,6 +5,10 @@ jQuery(document).ready(function($){
  		Scripts for styles slider page
  	************************************************ */
 
+
+ 	/* Add infucntionality to automatically update the width */
+
+
  	// Select all of the style list items
  	const sliderList = document.querySelector('.slider__list');
     const sliderListLi = document.querySelectorAll('.slider__list li');

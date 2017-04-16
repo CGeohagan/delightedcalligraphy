@@ -24,6 +24,23 @@ svg {
 
 
 
+/* Loader */
+
+.loader {
+	opacity: 1;
+	transition: opacity .3s ease;
+}
+
+.is-loader-hidden {
+	opacity: 0;
+}
+
+.is-loader-gone {
+	display: none;
+}
+
+
+
 /* Access Navigation Toggle Button */
 
 .access__toggle {
