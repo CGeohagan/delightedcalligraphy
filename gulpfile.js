@@ -3,6 +3,7 @@ var gulp      = require('gulp'),
     cache = require('gulp-cache'),
     autoprefixer = require('gulp-autoprefixer'),
     cleancss    = require('gulp-clean-css'),
+    eslint  = require('gulp-eslint'),
     image = require('gulp-image'),
     sourcemaps = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify');
@@ -37,7 +38,23 @@ gulp.task('uglify', function(){
     gulp.src('assets/development/js/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('assets/js'))
+});
 
+gulp.task('lint', () => {
+    // ESLint ignores files with "node_modules" paths. 
+    // So, it's best to have gulp ignore the directory as well. 
+    // Also, Be sure to return the stream from the task; 
+    // Otherwise, the task may end before the stream has finished. 
+    return gulp.src(['assets/**/*.js','!node_modules/**'])
+        // eslint() attaches the lint output to the "eslint" property 
+        // of the file object so it can be used by other modules. 
+        .pipe(eslint())
+        // eslint.format() outputs the lint results to the console. 
+        // Alternatively use eslint.formatEach() (see Docs). 
+        .pipe(eslint.format())
+        // To have the process exit with an error code (1) on 
+        // lint error, return the stream and pipe to failAfterError last. 
+        .pipe(eslint.failAfterError());
 });
 
 gulp.task('default',['styles', 'image', 'uglify']);

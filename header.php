@@ -19,8 +19,6 @@
     <meta charset="<?php bloginfo( "charset" ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
     <!-- favicon & links -->
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png" />
     <link rel="pingback" href="<?php bloginfo( "pingback_url" ); ?>" />
@@ -31,8 +29,6 @@
     <!--[if lt IE 9]>
         <script src="<?php echo get_template_directory_uri(); ?>/assets/vendor/html5shiv.min.js" type="text/javascript"></script>
     <![endif]-->
-
-
 
     <?php // Lets other plugins and files tie into our theme's <head>:  
     wp_head(); ?>
