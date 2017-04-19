@@ -58,3 +58,32 @@
 	}
 	
 }
+
+
+
+/* About Theme Styles */
+
+.about {
+	padding-top: 150px;
+}
+
+.page-template-page-about {
+	background-color: $light-cream;
+}
+
+.press {
+	background-color: $violet;
+
+	a {
+		color: $dark-grey;
+		margin-right: .5em;
+
+		&:hover,
+		&:focus {
+			color: $light-cream;
+		}
+
+	}
+
+}
+
