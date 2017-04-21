@@ -2,10 +2,10 @@
 /**
  * Archive pagination
  *
- * @package TwoDelighted_Theme
+ * @package delighted_calligraphy
  */
 ?>
 <nav id="nav-below">
-    <div class="nav-previous"><?php previous_posts_link( __( 'Previous', 'twodelighted-theme' ) ); ?></div>
-    <div class="nav-next"><?php next_posts_link( __( 'Next', 'twodelighted-theme' ) ); ?></div>
+    <div class="nav-previous"><?php previous_posts_link( __( 'Previous', 'delighted-calligraphy' ) ); ?></div>
+    <div class="nav-next"><?php next_posts_link( __( 'Next', 'delighted-calligraphy' ) ); ?></div>
 </nav><!-- #nav-above -->

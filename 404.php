@@ -6,7 +6,7 @@
  */
 get_header(); ?>
 
-<section id="primary" role="main">
+<section class="col pad" role="main">
 
 	<article id="post-0" class="post error404 not-found">
 		<header class="entry-header">
@@ -14,13 +14,10 @@ get_header(); ?>
 		</header>
 
 		<div class="entry-content">
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps a search would help?', 'delighted-calligraphy' ); ?></p>
-
-			<?php get_search_form(); ?>
+			<h2><?php _e( 'I&rsquo;m sorry! It seems we can&rsquo;t find what you&rsquo;re looking for.', 'delighted-calligraphy' ); ?></h2s>
 
 		</div><!-- .entry-content -->
 	</article><!-- #post-0 -->
 
-</section><!-- #primary -->
-<?php get_sidebar(); ?>
+</section>
 <?php get_footer(); ?>?>

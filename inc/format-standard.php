@@ -30,21 +30,21 @@
         } ?>
         <div class="entry-excerpt"><?php the_excerpt(); ?></div>
         <div class="more"><a class="more-tag" href="<?php echo get_permalink(); ?>"> Read More</a></div> 
-        <?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twodelighted-theme' ) . '</span>', 'after' => '</div>' ) ); ?>
+        <?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'delighted-calligraphy' ) . '</span>', 'after' => '</div>' ) ); ?>
     </div><!-- .entry-content -->
 
     <footer class="entry-meta">
                     
         <div class="comments-link">
             <?php comments_popup_link( 
-                __( 'Leave a comment', 'twodelighted-theme' ), 
-                __( '1 comment', 'twodelighted-theme' ), 
-                __( '% comments', 'twodelighted-theme' ) ); 
+                __( 'Leave a comment', 'delighted-calligraphy' ), 
+                __( '1 comment', 'delighted-calligraphy' ), 
+                __( '% comments', 'delighted-calligraphy' ) ); 
             ?>
         </div>
                     
         <div class="postmeta">
-            <?php the_tags( '<div class="post-tags">' . __( 'Tagged: ', 'twodelighted-theme' ) , ', ', '</div>' ); ?>
+            <?php the_tags( '<div class="post-tags">' . __( 'Tagged: ', 'delighted-calligraphy' ) , ', ', '</div>' ); ?>
         </div>
                     
     </footer><!-- #entry-meta -->

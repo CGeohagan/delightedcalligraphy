@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<main id="main" role="main" class="styles">
+<main id="main" role="main" class="styles no-pad">
 
     <section class="slider">
     
@@ -33,13 +33,16 @@ get_header(); ?>
                             <figure class="slider__item__figure border">                      
                                 <?php 
                                     $image = get_field('style_image');
+                                    $thumb = $image['sizes']['xlarge'];
+
                                     if( !empty($image) ): ?>
-                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                                <?php endif; ?>                       
+                                        <img src="<?php echo $thumb; ?>" alt="<?php echo $image['alt']; ?>" />
+                                <?php endif; ?>   
+
                             </figure>
 
                             <div class="slider__item__section">
-                                <h2 class="assistive-text">
+                                <h2 class="screen-reader-text">
                                     <?php the_field('style_name'); ?>
                                 </h2>
                                 <div class="slider__item__svg">

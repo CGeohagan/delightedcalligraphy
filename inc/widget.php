@@ -5,13 +5,13 @@
  * (This file goes in a WordPress theme and is included into functions.php)
  * 
  */
-class TwoDelighted_Theme_custom_widget extends WP_Widget {
+class delighted_calligraphy_custom_widget extends WP_Widget {
 	// Register widget with WordPress.
 	public function __construct() {
 		parent::__construct(
-	 		'twodelighted-theme-custom-widget', // Base ID
+	 		'delighted-calligraphy-custom-widget', // Base ID
 			'My Custom Widget', // Name
-			array( 'description' => __( 'This is a special custom widget', 'twodelighted-theme' ), ) // Args
+			array( 'description' => __( 'This is a special custom widget', 'delighted-calligraphy' ), ) // Args
 		);
 	}
 	// Front-end display of widget.
@@ -38,11 +38,11 @@ class TwoDelighted_Theme_custom_widget extends WP_Widget {
 			$title = $instance[ 'title' ];
 		}
 		else {
-			$title = __( 'New title', 'twodelighted-theme' );
+			$title = __( 'New title', 'delighted-calligraphy' );
 		}
 		?>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'delighted-calligraphy' ); ?></label> 
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 		<?php 
@@ -50,5 +50,5 @@ class TwoDelighted_Theme_custom_widget extends WP_Widget {
 }
 // register our custom widget
 add_action( 'widgets_init', 
-	create_function( '', 'register_widget( "TwoDelighted_Theme_custom_widget" );' ) 
+	create_function( '', 'register_widget( "delighted_calligraphy_custom_widget" );' ) 
 ); ?>

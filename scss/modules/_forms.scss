@@ -2,30 +2,48 @@
 #{$all-text-inputs}, 
 textarea {
 	padding: 4px 10px;
+	margin: .5em 0;
+	width: 100%;
 	-webkit-appearance: none;
 }
+
 #{$all-text-inputs-focus},
 textarea:focus {
 	color: $text;
-}
-input[type=submit] {
-	-webkit-appearance: none;
+	outline: $link auto 5px;
 }
 
-/* Placeholders */
-::placeholder {
-	color: $text;
+input[type=submit] {
+	@include transition(background-color)
+	background-color: $dark-grey;
+	border-radius: 2px;
+	color: $white;
+	float: right;
+	font-family: $stack-san-serif;
+	text-transform: uppercase;
+	padding: 10px 30px;
+
+	&:hover,
+	&:focus {
+		background-color: $violet;
+	}
+
+}
+
+div.wpcf7-validation-errors {
+	border-color: $gold;
 }
 
 // Customize Chrome autofill background (yellow by default)
-// input:-webkit-autofill,
-// input:-webkit-autofill:focus {
-//     -webkit-box-shadow:0 0 0 50px #6d6e6e inset; 
-//     -webkit-text-fill-color: white;
-// }
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow:0 0 0 50px $gold inset; 
+    -webkit-text-fill-color: white;
+}
 
 /* Search form */
 input#s {
 }
+
 input#searchsubmit {
 }

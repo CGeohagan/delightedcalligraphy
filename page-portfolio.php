@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<main id="main" role="main" class="col portfolio">
+<main id="main" role="main" class="col portfolio pad">
 
     <?php while ( have_posts() ) : the_post(); ?>
 

@@ -19,13 +19,13 @@ get_header(); ?>
     </div>
 </div> 
 
-<main id="main" role="main" class="col">
+<main id="main" role="main" class="col no-pad">
 
     <?php while ( have_posts() ) : the_post(); ?>
 
         <section class="hero-image">
             <div class="border border--inside">
-                <h1 class="entry-title assistive-text"><?php the_title(); ?></h1>
+                <h1 class="entry-title screen-reader-text"><?php the_title(); ?></h1>
             </div>
         </section>
         <section class="intro-text">

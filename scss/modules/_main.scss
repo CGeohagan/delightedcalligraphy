@@ -294,12 +294,16 @@
 
 	h1:after {
 		width: 70%;
- 		height: 3px;
+ 		height: 2px;
  		left: 15%;
  		bottom: -10px;
  		background-color: $dark-grey;
  		content: '';
  		position: absolute;
+	}
+
+	h2 {
+		margin-bottom: 2px;
 	}
 
 	p {
@@ -683,7 +687,7 @@
 
 	h3 {
 		font-size: $large;
-		margin: 100px 0 30px;
+		margin: 120px 0 30px;
 	}
 
 }
@@ -691,20 +695,20 @@
 .social__wrapper {
 	display: flex;
 	flex-direction: column;
-	width: 60%;
-	margin: 0 auto 100px;
+	width: 55%;
+	margin: 0 auto 120px;
 
+}
+
+@media (min-width: $s) {
+
+	.social__wrapper {
+		width: 45%;
+	}
+	
 }
 
 @media (min-width: $m) {
-	
-	.social__wrapper {
-		width: 40%;
-	}
-
-}
-
-@media (min-width: $l) {
 
 	.social__wrapper {
 		flex-direction: row;

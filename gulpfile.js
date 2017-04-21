@@ -5,6 +5,7 @@ var gulp      = require('gulp'),
     cleancss    = require('gulp-clean-css'),
     eslint  = require('gulp-eslint'),
     image = require('gulp-image'),
+    pump = require('pump'),
     sourcemaps = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify');
 
@@ -18,26 +19,14 @@ gulp.task('styles', function(){
         .pipe(gulp.dest(''));
 });
 
-gulp.task('image', function() {
-    return gulp.src('assets/development/images/**/*')
-        .pipe(cache(image({
-          pngquant: true,
-          optipng: false,
-          zopflipng: true,
-          jpegRecompress: true,
-          jpegoptim: false,
-          mozjpeg: false,
-          gifsicle: true,
-          svgo: false,
-          concurrent: 10
-        })))
-        .pipe(gulp.dest('assets/images'))
-});
-
-gulp.task('uglify', function(){
-    gulp.src('assets/development/js/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('assets/js'))
+gulp.task('compress', function (cb) {
+  pump([
+        gulp.src('assets/development/js/*.js'),
+        uglify(),
+        gulp.dest('assets/js')
+    ],
+    cb
+  );
 });
 
 gulp.task('lint', () => {
@@ -57,7 +46,7 @@ gulp.task('lint', () => {
         .pipe(eslint.failAfterError());
 });
 
-gulp.task('default',['styles', 'image', 'uglify']);
+gulp.task('default',['styles', 'compress']);
 
 gulp.task('watch', function() {
     

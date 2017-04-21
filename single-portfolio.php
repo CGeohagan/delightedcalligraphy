@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<main id="main" class="col two-col" role="main">
+<main id="main" class="col two-col no-pad" role="main">
 
     <section class="primary">
 

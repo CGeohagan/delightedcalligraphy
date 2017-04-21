@@ -45,7 +45,7 @@
                     ?>
                 </a>
             </div>  
-            <a class="assistive-text" href="#main">Skip to content</a>
+            <a class="screen-reader-text" href="#main">Skip to content</a>
             <div class="primary-nav">
                 <nav class="access" role="navigation">
                     <?php 

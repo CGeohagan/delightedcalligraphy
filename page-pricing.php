@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<main id="main" role="main" class="col pricing">
+<main id="main" role="main" class="col pricing pad">
 
     <?php while ( have_posts() ) : the_post(); ?>
 
@@ -16,8 +16,6 @@ get_header(); ?>
         </section>
 
     <?php endwhile; // end of the loop. ?>
-
-
 
     <section class="col border--margin">
 

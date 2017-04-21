@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<main id="main" role="main" class="col about">
+<main id="main" role="main" class="col about pad">
 
     <?php while ( have_posts() ) : the_post(); ?>
 
@@ -26,7 +26,7 @@ get_header(); ?>
               <?php 
                   $image = get_field('about_image');
                   if( !empty($image) ): ?>
-                      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="border" />
+                      <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" class="border" />
               <?php endif; ?>                       
             </figure>
             <div class="about__section__text">
@@ -54,7 +54,7 @@ get_header(); ?>
         	<h4>Pinterest</h4>
         	<figure>
             <a href="<?php the_field('pinterest_link'); ?>" target="_blank">
-            	<img src="<?php echo get_field('pinterest_image')['url']; ?>" alt="<?php echo get_field('pinterest_image')['alt']; ?>" />
+            	<img src="<?php echo get_field('pinterest_image')['sizes']['medium']; ?>" alt="<?php echo get_field('pinterest_image')['alt']; ?>" />
             </a>
           </figure>
         </div>
@@ -62,7 +62,7 @@ get_header(); ?>
         	<h4>Email</h4>
         	<figure>
             <a href="mailto:<?php the_field('email_address'); ?>" target="_blank">
-            	<img src="<?php echo get_field('email_image')['url']; ?>" alt="<?php echo get_field('email_image')['alt']; ?>" />
+            	<img src="<?php echo get_field('email_image')['sizes']['medium']; ?>" alt="<?php echo get_field('email_image')['alt']; ?>" />
             </a>
           </figure>
         </div>

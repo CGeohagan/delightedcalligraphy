@@ -2,6 +2,7 @@
  **************/
  
 
+
 .footer {
 	padding: 30px 20px;
 	width: 100%;
@@ -10,13 +11,36 @@
 	align-items: center;
 }
 
-@media (min-width: $xs) {
+@media (min-width: $s) {
 
 	.footer {
 		flex-direction: row;
 		justify-content: space-between;
 	}
 	
+}
+
+
+
+/* Social Icons */
+
+.social-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 1em 0;
+	width: 120px;
+
+	svg {
+		width: 22px;
+		height: 22px;
+
+		path {
+			fill: $dark-grey;
+			stroke: none;
+		}
+	}
+
 }
 
 

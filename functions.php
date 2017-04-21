@@ -11,9 +11,9 @@
 /**
  * Set the content width
  */
-/*if ( ! isset( $content_width ) ) :
+if ( ! isset( $content_width ) ) :
     $content_width = 640;
-endif;*/
+endif;
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -30,13 +30,13 @@ if ( ! function_exists( 'delighted_calligraphy_setup' ) ):
         // Enable support for Post Thumbnails on posts and pages
         add_theme_support( 'post-thumbnails' );
         // Enable support for Post Formats.
-        add_theme_support( 'post-formats', array( 
+        /*add_theme_support( 'post-formats', array( 
             'aside', 
             'image', 
             'video', 
             'quote', 
             'link' 
-        ) );
+        ) );*/
         // Enable support for HTML5 markup.
         add_theme_support( 'html5', array(
             'comment-list',
@@ -50,7 +50,8 @@ if ( ! function_exists( 'delighted_calligraphy_setup' ) ):
         ) );
         
         // Add custom image sizes
-            // add_image_size( &#039;name&#039;, 500, 300, true );
+            add_image_size( 'xlarge', 800, 533 );
+
     }
 endif; // delighted_calligraphy_setup
 add_action( 'after_setup_theme', 'delighted_calligraphy_setup' );
@@ -61,6 +62,14 @@ function delighted_calligraphy_widgets_init() {
     register_sidebar( array(
         'name' => __( 'Sidebar', 'delighted-calligraphy' ),
         'id' => 'sidebar-1',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => "</aside>",
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    register_sidebar( array(
+        'name' => __( 'Form', 'delighted-calligraphy' ),
+        'id' => 'form-sidebar',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => "</aside>",
         'before_title' => '<h3 class="widget-title">',
@@ -119,7 +128,7 @@ add_action('wp_enqueue_scripts', 'delighted_calligraphy_scripts');
 // Google webfonts stylesheet
 function wpb_add_google_fonts() {
 
-    wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Cormorant:400,400i|Lato:400,700', false);
+    wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Cormorant:400,400i|Lato:400', false);
 
 }
 
@@ -128,7 +137,7 @@ add_action ('wp_enqueue_scripts', 'wpb_add_google_fonts');
 /**
  * Remove the front-end admin bar for everybody, always
  */
-show_admin_bar( false );
+show_admin_bar( true );
 // Add TinyMCE buttons that are disabled by default
 //function delighted_calligraphy_mce_buttons_2($buttons) {  
 //  /**
