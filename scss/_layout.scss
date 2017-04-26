@@ -9,7 +9,7 @@ body {
 	min-height: 100vh;
 }
 
-body, .col, #page {
+body, .col {
 	display: flex;
 	flex-direction: column;
 }
@@ -30,6 +30,7 @@ body, .col, #page {
 	align-items: center;
 	flex-direction: row;
 	position: fixed;
+	top: 0;
 	z-index: 90;
 }
 
@@ -77,7 +78,7 @@ body, .col, #page {
 
 
 
-
 /* Sticky footer */
-//@include sticky-footer( $footerheight, '#page','#main','#footer');
+
+//@include sticky-footer( $footer-height, '#page','#main','.footer');
 

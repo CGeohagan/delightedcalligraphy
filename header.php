@@ -37,6 +37,7 @@
 <body <?php body_class(); ?>>
 
 <div id="page">
+
     <header class="header" role="banner">     
             
             <div class="logo">

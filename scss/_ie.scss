@@ -1,0 +1,37 @@
+/* INTERNET EXPLORER
+ ********************/
+
+
+/* Internet Explorer 10 & 11 */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  
+  .logo, 
+  .loader,
+  .slider__item__svg {
+
+  	path {
+  		stroke-dashoffset: 0;
+  	}
+
+  }
+	
+}
+
+
+
+/* Microsoft Edge Styles */
+
+@supports (-ms-accelerator:true) {
+  
+  .logo, 
+  .loader,
+  .slider__item__svg {
+
+  	path {
+  		stroke-dashoffset: 0;
+  	}
+
+  }
+  
+}

@@ -8,19 +8,19 @@ jQuery(document).ready(function($){
 	/* Add infunctionality to automatically update the width */
 
 	// Select all of the style list items
-	const sliderList = document.querySelector('.slider__list');
-	const sliderListLi = document.querySelectorAll('.slider__list li');
+	var sliderList = document.querySelector('.slider__list');
+	var sliderListLi = document.querySelectorAll('.slider__list li');
 
 	// Determine the number of list items using the length property
-	const listNum = sliderListLi.length;
-	const lastSliderNum = -100 * (listNum - 1);
+	var listNum = sliderListLi.length;
+	var lastSliderNum = -100 * (listNum - 1);
 
 	// Set the list width to listNum * 100% view width
 	sliderList.style.width = listNum * 100 + 'vw';
 
 	// Select the previous and next buttons to navigate slider
-	const prevButton = document.querySelector('.prev-button');
-	const nextButton = document.querySelector('.next-button');
+	var prevButton = document.querySelector('.prev-button');
+	var nextButton = document.querySelector('.next-button');
 
 	// Create function for setting transformX value when slider moves
 	function setTransform(transformX) {
@@ -37,8 +37,8 @@ jQuery(document).ready(function($){
 	}
 
 	// Set the currentSliderLi to the first list item and add the active class	
-	const firstSliderLi = sliderList.firstElementChild;
-	const lastSliderLi = sliderList.lastElementChild;
+	var firstSliderLi = sliderList.firstElementChild;
+	var lastSliderLi = sliderList.lastElementChild;
 	var currentSliderLi = firstSliderLi;
 	firstSliderLi.classList.add('is-slider-active');
 

@@ -7,9 +7,10 @@
  */
 ?>
 
-</div><!-- #page -->
+</div>
+<!-- #page -->
 
-<footer class="footer" role="contentinfo">	
+<footer id="footer" class="footer" role="contentinfo">	
 	<div id="copyright">
         &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>	        
   </div>
@@ -24,7 +25,7 @@
       <?php get_template_part( 'assets/images/mail.svg' ); ?>
     </a>
   </div>
-  <a href="http://cgeohagan.github.io" target="_blank" rel="nofollow">theme by Colleen Geohagan</a>
+  <p>made with  &#9829; by<a href="http://cgeohagan.github.io" target="_blank" rel="nofollow"> Colleen Geohagan</a></p>
 </footer><!-- #colophon -->
 
 <?php wp_footer(); ?> 

@@ -6,10 +6,10 @@ jQuery(document).ready(function($){
  	************************************************ */
 
 	// Select the header, navigation button, navigation section, and navigation list
-	const header = document.querySelector('.header');
-	const accessToggleButton = document.querySelector('.access__toggle');
-	const accessNav = document.querySelector('.access');
-	const accessNavList = document.querySelector('.access__list');
+	var header = document.querySelector('.header');
+	var accessToggleButton = document.querySelector('.access__toggle');
+	var accessNav = document.querySelector('.access');
+	var accessNavList = document.querySelector('.access__list');
 
 	// When you click on the toggle button, toggle the active classes
 	accessToggleButton.addEventListener('click', function() {

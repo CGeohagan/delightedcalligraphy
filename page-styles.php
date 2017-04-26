@@ -33,10 +33,9 @@ get_header(); ?>
                             <figure class="slider__item__figure border">                      
                                 <?php 
                                     $image = get_field('style_image');
-                                    $thumb = $image['sizes']['xlarge'];
 
                                     if( !empty($image) ): ?>
-                                        <img src="<?php echo $thumb; ?>" alt="<?php echo $image['alt']; ?>" />
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                                 <?php endif; ?>   
 
                             </figure>
@@ -63,10 +62,14 @@ get_header(); ?>
 
         <div class="slider__buttons">
             <button class="prev-button">
+                <?php get_template_part( 'assets/images/chevron.svg' );
+                    ?>
                 <?php get_template_part( 'assets/images/arrow.svg' );
                     ?>
             </button>
             <button class="next-button">
+                <?php get_template_part( 'assets/images/chevron.svg' );
+                    ?>
                 <?php get_template_part( 'assets/images/arrow.svg' );
                     ?>
             </button>

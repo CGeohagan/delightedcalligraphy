@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
      Scripts for loader functionality
 ************************************************ */
 
-const loader = document.querySelector('.loader');
+var loader = document.querySelector('.loader');
 
 function fadeLoader() {
 	loader.classList.add('is-loader-hidden');

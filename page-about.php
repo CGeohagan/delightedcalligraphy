@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<main id="main" role="main" class="col about pad">
+<main id="main" role="main" class="about pad">
 
     <?php while ( have_posts() ) : the_post(); ?>
 

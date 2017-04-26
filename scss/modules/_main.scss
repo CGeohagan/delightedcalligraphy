@@ -259,13 +259,14 @@
 
 .details {
 	height: 100%;
- 	margin: 150px 0 50px;
+ 	margin: 120px 0 50px;
 	
 	&__border--double {
-		height: 450px;
+		min-height: 450px;
  		width: 90%;
  		border-top: 4px double $dark-grey;
     	border-bottom: 4px double $dark-grey;
+    padding: 1em 0;
 	}
 
 	&__pagination {
@@ -308,8 +309,9 @@
 
 	p {
 		font-size: $medium;
-		margin: 2em 2em 0;
+		margin: 2em 1em 0;
 		text-align: center;
+		width: 90%;
 	} 
 
 }
@@ -337,8 +339,12 @@
 		&__border--double {
 			border-radius: 100%;
  			border: 4px double $dark-grey;
-			height: 450px;
-			width: 450px;		
+			height: 475px;
+			width: 475px;		
+		}
+
+		p {
+			margin: 2em 2em 0;
 		}
 
 	}
@@ -354,7 +360,7 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 	margin: 10px;
-	padding: 30px;
+	padding: .5em;
 	text-align: center;
 
 	&--pad {
@@ -391,6 +397,7 @@
 	
 	.info {
 		margin: 30px 0;
+		padding: 20px;
 
 		&--half {
 			margin-bottom: 0;
@@ -443,8 +450,20 @@
 
 	&--margin {
 		border: 12px solid $light-cream;
-		margin: 2em;
+		margin: 1em;
 	}
+}
+
+@media (min-width: $s) {
+	
+	.border {
+
+		&--margin {
+			margin: 2em;
+		}
+
+	}
+
 }
 
 
@@ -458,8 +477,8 @@
 }
 
 .slider__header {
-	top: 55%;
-	left: 5%;
+	top: 61vh;
+	left: 5vw;
 	position: fixed;
 	z-index: 1000;
 
@@ -473,7 +492,7 @@
 
 	h1 {
 		font-family: $stack-san-serif;
-		font-size: $large;
+		font-size: $medium;
 	}
 
 }
@@ -500,37 +519,41 @@
 	}
 
 	&__figure {
-		width: 80%;
+		width: 95vw;
 		position: absolute;
-		right: 10%;
-		top: 115px;
+		right: 2.5vw;
+		top: 95px;
 	}
 
 	&__section {
-		top: 65vh;
+		top: 70vh;
 		position: absolute;
 		left: 5vw;
 	}
 
 	&__svg {
 
+		display: flex;
+		justify-content: flex-start;
+		margin-bottom: 2px;
+
 		svg {
-			height: 70px;
+			height: 60px;
 		}
 	}
 
 	&__description {
 		font-size: 14px;
-		width: 90%;
+		width: 90vw;
 	}
 	
 }
 
 .slider__buttons {
 	position: absolute;
-	width: 90%;
-	left: 5%;
-	bottom: 2.5%;
+	width: 95vw;
+	left: 2.5vw;
+	top: 33vh;
 	display: flex;
 	justify-content: space-between;
 
@@ -543,6 +566,20 @@
 		width: 80px;
 	}
 
+	.arrow {
+		display: none;
+	}
+
+	.chevron {
+		height: 40px;
+
+		path {
+			fill: $white;
+			stroke: $dark-grey;
+		}
+		
+	}
+
 	.prev-button {
 		transform: rotate(-180deg);
 	}
@@ -552,7 +589,8 @@
 @media (min-width: $s) {
 
 	.slider__header {
-		top: 57vh;
+
+		top: 59vh;
 		
 		h1 {
 			font-size: $large;
@@ -563,28 +601,49 @@
 	.slider__item {
 
 		&__figure {
-			width: 65%;
+			width: 60vw;
 			max-width: 800px;
 			right: 5vw;
 			top: 12.5vh;
 		}
 
 		&__section {
-			top: 65vh;
+			top: 68vh;
 		}
 
 		&__description {
 			font-size: $small;
+			padding-top: 2px;
+			width: 50vw;
+		}
+
+		&__svg {
+
+			svg {
+				height: 75px;
+			}
+
 		}
 
 	}
 	
 	.slider__buttons {
 
-		bottom: 5%;
+		width: 90vw;
+		left: 5vw;
+		top: inherit;
+		bottom: 5vh;
 
 		svg {
 			width: 120px;
+		}
+
+		.arrow {
+			display: block;
+		}
+
+		.chevron {
+			display: none;
 		}
 
 	}
@@ -597,19 +656,11 @@
 
 		&__description {
 			top: 80vh;
-			width: 400px;
+			width: 500px;
 		}
 
 		&__figure {
-			width: 60%;
-		}
-
-		&__svg {
-
-			svg {
-				height: 115px;
-			}
-
+			width: 57vw;
 		}
 
 	}

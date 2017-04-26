@@ -1,1 +1,1 @@
-jQuery(document).ready(function(e){function o(){d.classList.add("is-loader-hidden"),setTimeout(t,200)}function t(){d.classList.add("is-loader-gone")}const d=document.querySelector(".loader");setTimeout(o,1e3)});
+jQuery(document).ready(function(e){function d(){t.classList.add("is-loader-hidden"),setTimeout(o,200)}function o(){t.classList.add("is-loader-gone")}var t=document.querySelector(".loader");setTimeout(d,1e3)});

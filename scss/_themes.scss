@@ -6,11 +6,12 @@
 /* Portfolio Theme Styles */
 
 .portfolio {
+	align-items: center;
 	padding: 150px 1em 0;
 }
 
 .portfolio-title {
-	margin: 1em 0;
+	margin: 0 0 1em;
 }
 
 .page-template-page-portfolio {
@@ -126,3 +127,6 @@
 .error404 {
 	background-color: $violet;
 }
+
+
+

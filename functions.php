@@ -137,7 +137,7 @@ add_action ('wp_enqueue_scripts', 'wpb_add_google_fonts');
 /**
  * Remove the front-end admin bar for everybody, always
  */
-show_admin_bar( true );
+show_admin_bar( false );
 // Add TinyMCE buttons that are disabled by default
 //function delighted_calligraphy_mce_buttons_2($buttons) {  
 //  /**
