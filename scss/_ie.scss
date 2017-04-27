@@ -1,11 +1,23 @@
-/* INTERNET EXPLORER
- ********************/
+/* INTERNET EXPLORER FIXES
+ **************************/
 
 
 /* Internet Explorer 10 & 11 */
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   
+  .col, body {
+    display: block;
+  }
+
+  .two-col {
+    display: flex;
+  }
+
+  .social {
+    padding: 1em;
+  }
+
   .logo, 
   .loader,
   .slider__item__svg {
@@ -15,6 +27,10 @@
   	}
 
   }
+
+  .details__border--double {
+    height: 450px;
+  }
 	
 }
 
@@ -23,6 +39,18 @@
 /* Microsoft Edge Styles */
 
 @supports (-ms-accelerator:true) {
+
+  .col, body {
+    display: block;
+  }
+
+  .two-col {
+    display: flex;
+  }
+
+  .social {
+    padding: 1em;
+  }
   
   .logo, 
   .loader,

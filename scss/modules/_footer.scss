@@ -11,11 +11,20 @@
 	align-items: center;
 }
 
+.copyright {
+	width: 221px;
+	text-align: center;
+}
+
 @media (min-width: $s) {
 
 	.footer {
 		flex-direction: row;
 		justify-content: space-between;
+	}
+
+	.copyright {
+		text-align: left;
 	}
 	
 }

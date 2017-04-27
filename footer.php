@@ -11,7 +11,7 @@
 <!-- #page -->
 
 <footer id="footer" class="footer" role="contentinfo">	
-	<div id="copyright">
+	<div class="copyright">
         &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>	        
   </div>
   <div class="social-footer">
