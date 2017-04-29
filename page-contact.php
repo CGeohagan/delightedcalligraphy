@@ -17,7 +17,7 @@ get_header(); ?>
 	            <div class="contact__content">
 	                <?php the_content(); ?>
 	            </div>
-	            <div class="contact__form"
+	            <div class="contact__form">
 	            	<?php dynamic_sidebar('form-sidebar'); ?>
 	            </div>
             </div>

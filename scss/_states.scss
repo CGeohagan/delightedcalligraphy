@@ -28,16 +28,19 @@ svg {
 
 /* Loader */
 
-.loader {
+// If JavaScript is enabled, show the loader page
+.js .loader {
 	opacity: 1;
 	transition: opacity .3s ease;
 }
 
-.is-loader-hidden {
+// If JavaScript is enabled, lower opacity to zero after showing
+.js .is-loader-hidden {
 	opacity: 0;
 }
 
-.is-loader-gone {
+// If JavaScript is enabled, remove loader page
+.js .is-loader-gone {
 	display: none;
 }
 
@@ -95,23 +98,37 @@ svg {
 	background: none;
 }
 
+// Without JavaScript enabled, show the navigation
 .access {
+	opacity: 1;
+}
+
+// If JavaScript is enabled, hide the main menu
+.js .access {
 	opacity: 0;
 	@include transition(opacity);
 }
 
-.is-access-active {
+// If JavaScript is enabled, show the main menu when active
+.js .is-access-active {
 	opacity: 1;
 }
 
+// Without JavaScript enabled, show the navigation links 
 .access__list {
+	right: 0;
+}
+
+// If JavaScript is enabled, hide the navigation list
+.js .access__list {
 	background: none;
 	right: -200%;
 	transition: right .6s ease-out, 
 	    			background .8s ease-out;
 }
 
-.is-access-list-active {
+// If JavaScript is enabled, show the navigation list after hidden
+.js .is-access-list-active {
 	background-color: $violet;
 	box-shadow: 0 10px 20px rgba(0,0,0,.1);
 	right: 0;
@@ -122,11 +139,13 @@ svg {
 
 @media (min-width: $m) {
 
-	.is-header-active {
+	// If JavaScript is enabled, make the background of header an opaque white
+	.js .is-header-active {
 		background: rgba(255,255,255, 0.8);
 	}
 
-	.is-access-list-active {
+	// If JavaScript is enabled, make the background of the navigation links clear and delete box-shadow
+	.js .is-access-list-active {
 		background: none;
 		box-shadow: none;		
 	}

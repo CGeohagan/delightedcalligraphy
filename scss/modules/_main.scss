@@ -6,6 +6,11 @@
 /* Loader Section */
 
 .loader {
+	display: none;
+}
+
+// If JavaScript is enabled, show the loader page
+.js .loader {
 	display: flex;
 	position: fixed;
 	width: 100vw;
@@ -44,7 +49,7 @@
 
 @media (min-width: $l) {
 	
-	.loader {
+	.js .loader {
 
 		&__logo {
 			width: 400px;
@@ -80,7 +85,7 @@
 	position: relative;
 
 	p {		
-		font-size: $large;
+		font-size: 26px;
 		line-height: 1.3em;
 		margin: 0 auto;
 		padding: 2em 0;

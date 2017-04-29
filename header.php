@@ -26,12 +26,19 @@
     <!-- stylesheets are enqueued via functions.php -->
 
     <!-- scripts  -->
+    <script>  
+        document.getElementsByTagName('html')[0].className += ' js';  
+    </script>  
     <!--[if lt IE 9]>
         <script src="<?php echo get_template_directory_uri(); ?>/assets/vendor/html5shiv.min.js" type="text/javascript"></script>
     <![endif]-->
 
     <?php // Lets other plugins and files tie into our theme's <head>:  
     wp_head(); ?>
+    <meta name="description" content="<?php bloginfo('description'); ?>" />
+    <meta name="author" content="Megan Hopkins" />
+    <meta name="contact" content="delightedcalligraphy@gmail.com" />
+    <meta name="keywords" content="delighted calligraphy, calligraphy, calligrapher, charlotte, north carolina, wedding, invitations, stationary" />
 </head>
 
 <body <?php body_class(); ?>>
