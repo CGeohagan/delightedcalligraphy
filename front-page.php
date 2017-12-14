@@ -23,7 +23,7 @@ get_header(); ?>
 
     <?php while ( have_posts() ) : the_post(); ?>
 
-        <section class="hero-image">
+        <section class="hero-image" style="background-image: url(<?php echo get_field('hero_image')['url']; ?>);">
             <div class="border border--inside">
                 <h1 class="entry-title screen-reader-text"><?php the_title(); ?></h1>
             </div>

@@ -25,7 +25,7 @@
       <?php get_template_part( 'assets/images/mail.svg' ); ?>
     </a>
   </div>
-  <p>made with  &#9829; by<a href="http://cgeohagan.github.io" target="_blank" rel="nofollow"> Colleen Geohagan</a></p>
+  <p>made with  &#9829; by<a href="https://www.cgstudio.co/" target="_blank" rel="nofollow"> CG Studio</a></p>
 </footer><!-- #colophon -->
 
 <?php wp_footer(); ?> 
